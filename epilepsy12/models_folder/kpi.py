@@ -10,9 +10,9 @@ class KPI(models.Model, HelpTextMixin):
 
     The 12 key performance indicators, as specified by RCPCH, are:
 
-    1. Paediatrician with expertise in epilepsies - % of children and young people with epilepsy, with input by a 'consultant paediatrician with expertise in epilepsies' within 2 weeks of initial referral
+    1. Paediatrician with expertise in epilepsies within 2 weeks - % of children and young people with epilepsy, with input by a 'consultant paediatrician with expertise in epilepsies' within 2 weeks of initial referral
 
-    2. Epilepsy Specialist Nurse - % of children and young people with epilepsy, with input by epilepsy specialist nurse within the first year of care
+    2. Access to Epilepsy Specialist Nurse - % of children and young people with epilepsy, with input by epilepsy specialist nurse within the first year of care
 
     3. Tertiary input	 - % of children and young people meeting defined criteria for paediatric neurology referral, with input of tertiary care and/or CESS referral within the first year of care
 
@@ -20,7 +20,7 @@ class KPI(models.Model, HelpTextMixin):
 
     4. ECG  - % of children and young people with convulsive seizures and epilepsy, with an ECG at first year
 
-    5. MRI	 - % of children and young people with defined indications for an MRI, who had timely MRI within 6 weeks of request
+    5. MRI within 6 weeks	 - % of children and young people with defined indications for an MRI, who had timely MRI within 6 weeks of request
 
     6. Assessment of mental health issues  - %  of children and young people with epilepsy where there is documented evidence that they have been asked about mental health either through clinical screening, or a questionnaire/measure
 
@@ -36,7 +36,7 @@ class KPI(models.Model, HelpTextMixin):
 
             9c. Care planning has been updated when necessary - % of children and young people with epilepsy after 12 months where there is evidence that the care plan has been updated where necessary
 
-    9. (b) Comprehensive Care Planning content - % of children diagnosed with epilepsy with documented evidence of communication regarding core elements of care planning
+    9. (b) Comprehensive Care Planning components - % of children diagnosed with epilepsy with documented evidence of communication regarding core elements of care planning
 
             9a. Parental prolonged seizures care plan
                 Percentage of children and young people with epilepsy who have been prescribed rescue medication and have evidence of a written prolonged seizures plan.
@@ -65,7 +65,7 @@ class KPI(models.Model, HelpTextMixin):
     """
     paediatrician_with_expertise_in_epilepsies = models.IntegerField(
         help_text={
-            "label": "1. Paediatrician with expertise",
+            "label": "1. Paediatrician with expertise within 2 weeks",
             "reference": "Percentage of children and young people with epilepsy, with input by a 'consultant paediatrician with expertise in epilepsies' within 2 weeks of initial referral",
         },
         default=None,
@@ -77,7 +77,7 @@ class KPI(models.Model, HelpTextMixin):
     """
     epilepsy_specialist_nurse = models.IntegerField(
         help_text={
-            "label": "2. Epilepsy Specialist Nurse",
+            "label": "2. Access to Epilepsy Specialist Nurse",
             "reference": "Percentage of children and young people with epilepsy, with input by epilepsy specialist nurse within the first year of care.",
         },
         default=None,
@@ -125,7 +125,7 @@ class KPI(models.Model, HelpTextMixin):
     """
     mri = models.IntegerField(
         help_text={
-            "label": "5. MRI",
+            "label": "5. MRI within 6 weeks",
             "reference": "Percentage of children and young people with defined indications for an MRI, who had timely MRI within 6 weeks of request",
         },
         default=None,
@@ -221,7 +221,7 @@ class KPI(models.Model, HelpTextMixin):
     """
     comprehensive_care_planning_content = models.IntegerField(
         help_text={
-            "label": "9B. Comprehensive care planning content",
+            "label": "9B. Comprehensive care planning components",
             "reference": "Percentage of children diagnosed with epilepsy with documented evidence of communication regarding core elements of care planning (items a - f).",
         },
         default=None,
