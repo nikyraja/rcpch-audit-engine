@@ -50,7 +50,7 @@ class Assessment(TimeStampAbstractBaseClass, UserStampAbstractBaseClass, HelpTex
     consultant_paediatrician_input_date = models.DateField(
         help_text={
             "label": "Date seen by a consultant paediatrician with expertise in epilepsies.",
-            "reference": "Date seen by a consultant paediatrician with expertise in epilepsies.",
+            "reference": "Date seen by a consultant paediatrician with expertise in epilepsies. This includes Ward or ED review, Face to face clinic appointments and Virtual clinic appointments",
         },
         blank=True,
         default=None,
